@@ -1,0 +1,39 @@
+
+.forecast-title, .city{
+  width: 100%;
+  text-align: center;
+  padding: 50px 0 20px;
+  font-size: 35px;
+}
+
+span{
+  font-weight: 700;
+}
+
+.city{
+  font-size: 35px;
+  padding: 10px;
+}
+
+.dayFrameBox{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.more{
+  margin-left: auto;
+}
+
+.btn-box{
+  width: 55%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+
+.go-back{
+  margin-top: 30px;
+  font-size: 20px;
+}
