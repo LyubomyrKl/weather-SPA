@@ -28,9 +28,10 @@ span{
 
 .btn-box{
   width: 55%;
-  margin: 0 auto;
+  margin: 30px auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .go-back{

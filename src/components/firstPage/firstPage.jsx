@@ -1,14 +1,12 @@
 import {Link} from "react-router-dom";
 import "./firstPage.css";
 import DetailFrame from "../detailFrame/detailFrame";
-import React from "react";
-
 
 function FirstPage(props){
 
-    const {forecastList, city, onEvent, fetch} = props;
+    const {forecast, city, onEvent, fetch} = props;
 
-
+    console.log(forecast)
     const setCity  = (e) => {
         if(e.target.classList.contains('bound_btn')){
             const text = e.target.innerText
@@ -16,9 +14,6 @@ function FirstPage(props){
         }
     }
 
-    const elements = forecastList.slice(0, 3).map(item=>{
-        return(<DetailFrame  key = {item.moonrise_ts} data={item}/>)
-    })
 
     return (
         <div className="firstPage-wrapper">
@@ -33,10 +28,11 @@ function FirstPage(props){
              <div>
                 <h1 className="detail-city">{city}</h1>
              </div>
-                {elements}
+            <DetailFrame  data={forecast}/>
              <Link to="/more" className="btn more">
                 More  <i className="fas fa-angle-double-right"></i>
              </Link>
+
         </div>
     )
 }

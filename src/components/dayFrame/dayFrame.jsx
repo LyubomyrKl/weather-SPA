@@ -26,8 +26,8 @@ function DayFrame ({data}){
         <div className="frame">
             <span className="date">{dateBuilder(new Date(data.datetime))}</span>
             <div className="weather-box">
-                <span className="temp">`{data ? Math.round(data.temp*10)/10 : 'kek'}°C`</span>
-                <span className="weather">{data ? data.weather.description : "load"}</span>
+                <span className="temp">`{Math.round(data.temp*10)/1}°C`</span>
+                <span className="weather">{data.weather.description}</span>
             </div>
         </div>
     );
@@ -35,3 +35,14 @@ function DayFrame ({data}){
 }
 
 export default DayFrame
+
+
+function reducer(arr, callback, start = 0){
+    let temporaryObj = start;
+    for( let item of arr){
+        temporaryObj =  callback(temporaryObj, item);
+    }
+    return temporaryObj
+}
+
+console.log(reducer([1, 2, 3, 4], (a, b) => a +b ), 1)

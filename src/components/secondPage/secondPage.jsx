@@ -3,24 +3,20 @@ import {Link} from "react-router-dom";
 import "./secondPage.css"
 import DetailFrame from "../detailFrame/detailFrame"
 import React from "react";
+import Slider from "../slider/slider";
 
 function SecondPage (props){
     const{data, city} = props;
 
-    const elements = data.map(item=>{
-        return(
-            <div key={item.moonrise_ts}>
-                <DetailFrame  data={item}/>
-            </div>
-        )
-    })
+
 
     return (
-        <div>
+        <div className="second-page-wrapper">
             <h2 className="city">{city}</h2>
 
-            <div className='secondPage-wrapper'>
-                {elements}
+            <div>
+                <Slider data={data}/>
+
             </div>
 
             <div className="btn-box">
