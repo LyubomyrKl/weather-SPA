@@ -37,11 +37,10 @@ function App() {
                 .then((response) => {
                     return response.json();
                 }).then((data) => {
-                setForecastList(data.data)
                 localStorage.setItem("storageCity", data.city_name)
+                setForecastList(data.data)
                 setCity(localStorage.getItem("storageCity"));
                 setLoading(true);
-                console.log(data)
             })
         } catch (error) {
             console.log("error", error);

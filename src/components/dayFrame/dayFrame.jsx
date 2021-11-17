@@ -26,7 +26,7 @@ function DayFrame ({data}){
         <div className="frame">
             <span className="date">{dateBuilder(new Date(data.datetime))}</span>
             <div className="weather-box">
-                <span className="temp">`{Math.round(data.temp*10)/1}°C`</span>
+                <span className="temp">`{Math.round(data.temp*10)/10}°C`</span>
                 <span className="weather">{data.weather.description}</span>
             </div>
         </div>

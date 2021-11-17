@@ -56,4 +56,5 @@
 
 .second-page-wrapper .slick-prev{
     left: 80px ;
+    z-index: 10;
 }

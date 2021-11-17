@@ -54,7 +54,7 @@
 
 .more{
   display: block;
-  width: 100px;
+  max-width: 130px;
   margin: 50px auto;
 }
 
@@ -65,7 +65,6 @@
 .wrapper{
   height: 100vh;
   display: flex;
-
   flex-direction: column;
   justify-content: center;
 }

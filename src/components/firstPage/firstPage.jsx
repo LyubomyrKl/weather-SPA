@@ -1,6 +1,8 @@
 import {Link} from "react-router-dom";
 import "./firstPage.css";
 import DetailFrame from "../detailFrame/detailFrame";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faAngleDoubleRight} from "@fortawesome/free-solid-svg-icons";
 
 function FirstPage(props){
 
@@ -30,7 +32,7 @@ function FirstPage(props){
              </div>
             <DetailFrame  data={forecast}/>
              <Link to="/more" className="btn more">
-                More  <i className="fas fa-angle-double-right"></i>
+                More  <FontAwesomeIcon icon={faAngleDoubleRight}/>
              </Link>
 
         </div>

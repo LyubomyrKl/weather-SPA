@@ -1,14 +1,11 @@
 
 import {Link} from "react-router-dom";
-import "./secondPage.css"
-import DetailFrame from "../detailFrame/detailFrame"
-import React from "react";
+import "./secondPage.css";
 import Slider from "../slider/slider";
-
+import {FontAwesomeIcon} from   "@fortawesome/react-fontawesome";
+import {faAngleDoubleLeft} from "@fortawesome/free-solid-svg-icons"
 function SecondPage (props){
     const{data, city} = props;
-
-
 
     return (
         <div className="second-page-wrapper">
@@ -16,12 +13,10 @@ function SecondPage (props){
 
             <div>
                 <Slider data={data}/>
-
             </div>
-
             <div className="btn-box">
                 <Link to="/" className="btn go-back">
-                    <i className="fas fa-angle-double-left"></i>Go Back
+                    <FontAwesomeIcon icon={faAngleDoubleLeft}/> Go Back
                 </Link>
             </div>
         </div>
